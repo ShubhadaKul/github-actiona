@@ -13,7 +13,7 @@ import groovy.json.JsonSlurper
 import groovy.json.*
 
 String url = "http://10.0.0.93:8083"
-String sPipelinename = "APIDummy""
+String sPipelinename = "APIDummy"
 def http = new groovyx.net.http.HTTPBuilder(url)
 http.request(POST){multipartRequest ->
 		uri.path ='/api/executePipeline'
