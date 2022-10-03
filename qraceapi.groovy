@@ -1,6 +1,6 @@
-//@Grab(group='org.codehaus.groovy.modules.http-builder', module='http-builder', version='0.7.1' )
-//@Grab(group='org.apache.httpcomponents', module='httpclient', version='4.3.5' )
-//@Grab(group='org.apache.httpcomponents', module='httpmime', version='4.3.5' )
+@Grab(group='org.codehaus.groovy.modules.http-builder', module='http-builder', version='0.7.1' )
+@Grab(group='org.apache.httpcomponents', module='httpclient', version='4.3.5' )
+@Grab(group='org.apache.httpcomponents', module='httpmime', version='4.3.5' )
 
 
 import groovyx.net.http.HTTPBuilder
