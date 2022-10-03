@@ -6,6 +6,8 @@ jobs:
   qrace-api-call:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
+      
       - name : echo string
         run: echo "Hello world"
       - name : multiline script
