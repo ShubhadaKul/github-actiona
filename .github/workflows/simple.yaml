@@ -14,4 +14,4 @@ jobs:
           source "$HOME/.sdkman/bin/sdkman-init.sh"
           sdk install groovy
           groovy -version
-          # groovy qraceapi.groovy
+          groovy qraceapi.groovy

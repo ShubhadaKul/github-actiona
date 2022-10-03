@@ -12,16 +12,16 @@ import org.apache.http.entity.mime.content.StringBody
 import groovy.json.JsonSlurper
 import groovy.json.*
 
-String url = args[0]
-String sPipelinename = args[1]
+String url = "http://10.0.0.93:8083"
+String sPipelinename = "APIDummy""
 def http = new groovyx.net.http.HTTPBuilder(url)
 http.request(POST){multipartRequest ->
 		uri.path ='/api/executePipeline'
 		uri.query =[applicationName:'OpenBank',pipelineName:sPipelinename]
-headers.Authorization= "Basic ${"admin:Qrace@123".bytes.encodeBase64().toString()}"
+headers.Authorization= "Basic ${"admin:rta@123".bytes.encodeBase64().toString()}"
 headers.Accept= 'application/json'
 headers.contentType = "ContentType: application/json"
-print("Basic ${"admin:Qrace@123".bytes.encodeBase64().toString()}")
+print("Basic ${"admin:rta@123".bytes.encodeBase64().toString()}")
 	   response.success = { resp,data ->
              println "Success!"
              //println data
