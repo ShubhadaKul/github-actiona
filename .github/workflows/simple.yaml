@@ -11,6 +11,7 @@ jobs:
       - name : multiline script
         run: |
           curl -s "https://get.sdkman.io" | bash
+          source "$HOME/.sdkman/bin/sdkman-init.sh"
           sdk install groovy
           groovy -version
           # groovy qraceapi.groovy
