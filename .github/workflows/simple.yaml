@@ -10,5 +10,7 @@ jobs:
         run: echo "Hello world"
       - name : multiline script
         run: |
-          which groovy
+          curl -s "https://get.sdkman.io" | bash
+          sdk install groovy
+          groovy -version
           # groovy qraceapi.groovy
