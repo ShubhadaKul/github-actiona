@@ -3,7 +3,7 @@ name: shell Commands
 on : [push]
 
 jobs:
-  run-shell-command:
+  qrace-api-call:
     runs-on: ubuntu-latest
     steps:
       - name : echo string
@@ -11,4 +11,4 @@ jobs:
       - name : multiline script
         run: |
           which groovy
-          groovy qraceapi.groovy
+          # groovy qraceapi.groovy
