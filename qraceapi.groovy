@@ -14,7 +14,7 @@ import groovy.json.*
 
 String url = "http://10.0.0.93:8083"
 String sPipelinename = "APIDummy"
-def http = new groovyx.net.http.HTTPBuilder(url)
+def http = new HTTPBuilder(url)
 http.request(POST){multipartRequest ->
 		uri.path ='/api/executePipeline'
 		uri.query =[applicationName:'Openbank',pipelineName:sPipelinename]
