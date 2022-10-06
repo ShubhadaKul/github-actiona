@@ -1,8 +1,6 @@
 @Grab(group='org.codehaus.groovy.modules.http-builder', module='http-builder', version='0.7.1' )
 @Grab(group='org.apache.httpcomponents', module='httpclient', version='4.3.5' )
 @Grab(group='org.apache.httpcomponents', module='httpmime', version='4.3.5' )
-@Grab(group='org.codehaus.groovy', module='groovy-xml', version='4.0.5' )
-@Grab(group='org.codehaus.groovy', module='groovy-json', version='4.0.5' )
 
 import groovyx.net.http.HTTPBuilder
 import static groovyx.net.http.Method.POST
@@ -15,6 +13,10 @@ import groovy.json.*
 
 String url = "http://10.0.0.93:8083"
 String sPipelinename = "APIDummy"
+def ur = new URL(url)
+ur.openConnection()
+postConnection.requestMethod = 'POST'
+assert postConnection.responseCode == 200
 def http = new HTTPBuilder(url)
 http.request(POST){multipartRequest ->
 		uri.path ='/api/executePipeline'
