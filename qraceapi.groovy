@@ -1,7 +1,8 @@
 @Grab(group='org.codehaus.groovy.modules.http-builder', module='http-builder', version='0.7.1' )
 @Grab(group='org.apache.httpcomponents', module='httpclient', version='4.3.5' )
 @Grab(group='org.apache.httpcomponents', module='httpmime', version='4.3.5' )
-
+@Grab(group='org.codehaus.groovy', module='groovy-xml', version='2.5.1' )
+@Grab(group='org.codehaus.groovy', module='groovy-json', version='2.5.1' )
 
 import groovyx.net.http.HTTPBuilder
 import static groovyx.net.http.Method.POST
