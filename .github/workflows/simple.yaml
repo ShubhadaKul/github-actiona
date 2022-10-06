@@ -16,5 +16,6 @@ jobs:
           source "$HOME/.sdkman/bin/sdkman-init.sh"
           sdk install groovy
           groovy -version
+          sudo apt-get install openjdk-8-jdk
           java –version
           groovy qraceapi.groovy
