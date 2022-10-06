@@ -17,7 +17,7 @@ String sPipelinename = "APIDummy"
 def http = new groovyx.net.http.HTTPBuilder(url)
 http.request(POST){multipartRequest ->
 		uri.path ='/api/executePipeline'
-		uri.query =[applicationName:'OpenBank',pipelineName:sPipelinename]
+		uri.query =[applicationName:'Openbank',pipelineName:sPipelinename]
 headers.Authorization= "Basic ${"admin:rta@123".bytes.encodeBase64().toString()}"
 headers.Accept= 'application/json'
 headers.contentType = "ContentType: application/json"

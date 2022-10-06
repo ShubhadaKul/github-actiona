@@ -4,7 +4,7 @@ on : [push]
 
 jobs:
   qrace-api-call:
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
     steps:
       - uses: actions/checkout@v3
       
@@ -16,4 +16,5 @@ jobs:
           source "$HOME/.sdkman/bin/sdkman-init.sh"
           sdk install groovy
           groovy -version
+          java –version
           groovy qraceapi.groovy
