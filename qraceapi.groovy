@@ -14,8 +14,19 @@ import groovy.json.*
 String url = "http://10.0.0.93:8083"
 String sPipelinename = "APIDummy"
 def ur = new URL(url)
-ur.openConnection()
-postConnection.requestMethod = 'POST'
+(ur.openConnection()).with ({
+    requestMethod = 'POST'
+    doOutput = true
+    setRequestProperty('Content-Type', '...') // Set your content type.
+    outputStream.withPrintWriter({printWriter ->
+        printWriter.write('...') // Your post data. Could also use withWriter() if you don't want to write a String.
+    })
+    // Can check 'responseCode' here if you like.
+    postResult = inputStream.text // Using 'inputStream.text' because 'content' will throw an exception when empty.
+})
+
+
+ur.requestMethod = 'POST'
 assert postConnection.responseCode == 200
 def http = new HTTPBuilder(url)
 http.request(POST){multipartRequest ->

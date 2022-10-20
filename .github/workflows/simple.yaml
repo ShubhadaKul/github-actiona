@@ -12,10 +12,6 @@ jobs:
         run: echo "Hello world"
       - name : multiline script
         run: |
-          curl -s "https://get.sdkman.io" | bash
-          source "$HOME/.sdkman/bin/sdkman-init.sh"
-          sdk install groovy
-          groovy -version
           sudo apt-get install openjdk-8-jdk
           java -version
-          groovy qraceapi.groovy
+          java -jar QRaceTestOps.jar http://3.108.130.144:8082/ Openbank Test
