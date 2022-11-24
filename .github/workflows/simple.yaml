@@ -9,7 +9,7 @@ jobs:
       - uses: actions/checkout@v3
       
       - name : echo string
-        run: echo "Hello world"
+        run: echo "Hello  world"
       - name : multiline script
         run: |
           sudo apt-get install openjdk-8-jdk
